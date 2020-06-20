@@ -52,7 +52,8 @@ public class MyWizardTelegramBot extends TelegramWebhookBot {
 //                e.printStackTrace();
 //            }
             System.out.println("********* HEROKU **********");
-            String link = "tg://resolve?domain=proxy&server=88.218.17.166&port=443&secret=ee67545f8a258843b16aadd3c67220de2f7777772e676f6f676c652e636f6d";
+//            String link = "tg://resolve?domain=proxy&server=88.218.17.166&port=443&secret=ee67545f8a258843b16aadd3c67220de2f7777772e676f6f676c652e636f6d";
+            String link = "https://t.me/proxy?server=88.218.17.166&port=443&secret=ee67545f8a258843b16aadd3c67220de2f7777772e676f6f676c652e636f6d";
 
             try {
                 SendMessage sendMessage = new SendMessage().setChatId(chat_id).setText("****JOIN HEROKU PROXY CHANNEL!****");
