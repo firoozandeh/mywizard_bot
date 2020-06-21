@@ -52,15 +52,16 @@ public class MyWizardTelegramBot extends TelegramWebhookBot {
 //                e.printStackTrace();
 //            }
             System.out.println("********* HEROKU Is HERE **********");
-            String link = "tg://resolve?domain=proxy&server=88.218.17.166&port=443&secret=ee67545f8a258843b16aadd3c67220de2f7777772e676f6f676c652e636f6d";
-//            String link = "https://t.me/proxy?server=88.218.17.166&port=443&secret=ee67545f8a258843b16aadd3c67220de2f7777772e676f6f676c652e636f6d";
+//            String link = "tg://resolve?domain=proxy&server=88.218.17.166&port=443&secret=ee67545f8a258843b16aadd3c67220de2f7777772e676f6f676c652e636f6d";
+            String link = "https://t.me/proxy?server=88.218.17.166&port=443&secret=ee67545f8a258843b16aadd3c67220de2f7777772e676f6f676c652e636f6d";
 
             try {
-                SendMessage sendMessage = new SendMessage().setChatId(chat_id).setText("****JOIN To PROXY CHANNEL!****");
+//                SendMessage sendMessage = new SendMessage().setChatId(chat_id).setText("****JOIN To PROXY CHANNEL!****");
+                SendMessage sendMessage = new SendMessage().setChatId(chat_id);
                 InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
                 List<List<InlineKeyboardButton>> rowsInline = new ArrayList<>();
                 List<InlineKeyboardButton> rowInline = new ArrayList<>();
-                rowInline.add(new InlineKeyboardButton().setText("!! Connect !!").setUrl(link));
+                rowInline.add(new InlineKeyboardButton().setText("!! Connect to Prpxy !!").setUrl(link));
                 rowsInline.add(rowInline);
                 markupInline.setKeyboard(rowsInline);
                 sendMessage.setReplyMarkup(markupInline);
