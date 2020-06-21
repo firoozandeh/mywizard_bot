@@ -20,9 +20,9 @@ public class MyWizardTelegramBot extends TelegramWebhookBot {
     private String botToken;
 
 
-    public MyWizardTelegramBot(DefaultBotOptions botOptions) {
-        super(botOptions);
-    }
+//    public MyWizardTelegramBot(DefaultBotOptions botOptions) {
+//        super(botOptions);
+//    }
 
 
     @Override
