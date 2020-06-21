@@ -20,9 +20,9 @@ public class MyWizardTelegramBot extends TelegramWebhookBot {
     private String botToken;
 
 
-//    public MyWizardTelegramBot(DefaultBotOptions botOptions) {
-//        super(botOptions);
-//    }
+    public MyWizardTelegramBot(DefaultBotOptions botOptions) {
+        super(botOptions);
+    }
 
 
     @Override
@@ -44,31 +44,34 @@ public class MyWizardTelegramBot extends TelegramWebhookBot {
     public BotApiMethod<?> onWebhookUpdateReceived(Update update) {
         if (update.getMessage() != null && update.getMessage().hasText()) {
             long chat_id = update.getMessage().getChatId();
-
+//            if (update.getMessage().getText().equals("/start")) {
+//            if (update.getMessage().getText().equals("/start Y29tNTM3ODE=")) {
 
 //            try {
 //                execute(new SendMessage(chat_id, "Hi " + update.getMessage().getText()));
 //            } catch (TelegramApiException e) {
 //                e.printStackTrace();
 //            }
-            System.out.println("********* HEROKU Is HERE **********");
+//                System.out.println("********* ngrok Is HERE **********");
 //            String link = "tg://resolve?domain=proxy&server=88.218.17.166&port=443&secret=ee67545f8a258843b16aadd3c67220de2f7777772e676f6f676c652e636f6d";
-            String link = "https://t.me/proxy?server=88.218.17.166&port=443&secret=ee67545f8a258843b16aadd3c67220de2f7777772e676f6f676c652e636f6d";
+                String link = "https://t.me/proxy?server=88.218.17.166&port=443&secret=ee67545f8a258843b16aadd3c67220de2f7777772e676f6f676c652e636f6d";
 
-            try {
-                SendMessage sendMessage = new SendMessage().setChatId(chat_id).setText("****JOIN!****");
+                try {
+                    SendMessage sendMessage = new SendMessage().setChatId(chat_id).setText("⚡⚡⚡    New MTP Proxy    ⚡⚡⚡\n                  Quality: ★★★★☆                              \n" +
+                            "                  Ping: 0.133s       \uD83D\uDE80 \uD83D\uDE80 \uD83D\uDE80");
 //                SendMessage sendMessage = new SendMessage().setChatId(chat_id);
-                InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
-                List<List<InlineKeyboardButton>> rowsInline = new ArrayList<>();
-                List<InlineKeyboardButton> rowInline = new ArrayList<>();
-                rowInline.add(new InlineKeyboardButton().setText("!! Connect to Prpxy !!").setUrl(link));
-                rowsInline.add(rowInline);
-                markupInline.setKeyboard(rowsInline);
-                sendMessage.setReplyMarkup(markupInline);
-                execute(sendMessage);
-            } catch (TelegramApiException e) {
-                e.printStackTrace();
-            }
+                    InlineKeyboardMarkup markupInline = new InlineKeyboardMarkup();
+                    List<List<InlineKeyboardButton>> rowsInline = new ArrayList<>();
+                    List<InlineKeyboardButton> rowInline = new ArrayList<>();
+                    rowInline.add(new InlineKeyboardButton().setText("                                                   !! Connect !!                                               ").setUrl(link));
+                    rowsInline.add(rowInline);
+                    markupInline.setKeyboard(rowsInline);
+                    sendMessage.setReplyMarkup(markupInline);
+                    execute(sendMessage);
+                } catch (TelegramApiException e) {
+                    e.printStackTrace();
+                }
+//            }
 
 
 //        if (update.getMessage() != null && update.getMessage().hasText()) {
